@@ -9,8 +9,6 @@ class HadoopAT270 < Formula
 
   depends_on :java => "1.8+"
 
-  conflicts_with "yarn", :because => "both install `yarn` binaries"
-
   def install
     rm_f Dir["bin/*.cmd", "sbin/*.cmd", "libexec/*.cmd", "etc/hadoop/*.cmd"]
     libexec.install %w[bin sbin libexec share etc]
