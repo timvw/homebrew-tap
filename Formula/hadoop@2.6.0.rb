@@ -5,7 +5,7 @@ class HadoopAT260 < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8+"
+  depends_on :"openjdk@8"
 
   def install
     rm_f Dir["bin/*.cmd", "sbin/*.cmd", "libexec/*.cmd", "etc/hadoop/*.cmd"]
