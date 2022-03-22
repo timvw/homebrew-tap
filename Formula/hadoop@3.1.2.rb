@@ -4,8 +4,6 @@ class HadoopAT312 < Formula
   url "https://www.apache.org/dyn/closer.cgi?path=hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz"
   sha256 "1c02ccc60a09c63a48dc4234ffd3aed1b75e5a1f2b49d60927eda114b93dd31a"
 
-  bottle :unneeded
-
   depends_on "openjdk@8"
 
   def install

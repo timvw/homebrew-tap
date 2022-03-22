@@ -4,8 +4,6 @@ class HadoopAT260 < Formula
   #url "https://www.apache.org/dyn/closer.cgi?path=hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz"
   url "https://archive.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz"
 
-  bottle :unneeded
-
   depends_on "openjdk@8"
 
   def install

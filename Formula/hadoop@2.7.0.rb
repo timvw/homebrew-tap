@@ -5,8 +5,6 @@ class HadoopAT270 < Formula
   mirror "https://archive.apache.org/dist/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz"
   sha256 "ad270af05fff59d3f7021efe79328ed92dadfa64aa5ab4fcde4a204f803dbf9e"
 
-  bottle :unneeded
-
   depends_on "openjdk@8"
 
   def install
