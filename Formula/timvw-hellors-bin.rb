@@ -3,8 +3,8 @@
 class TimvwHellorsBin < Formula
   desc "test repository to test github actions"
   homepage "https://github.com/timvw/timvw-hello-rs"
-  url "https://github.com/timvw/timvw-hello-rs/releases/download/0.1.21/timvw-hello-rs-0.1.21-x86_64-apple-darwin-generic.tar.gz"
-  sha256 "34d02e41257526219ee4621055274e36662382e31ae13c2f52a434bde0f11a5f"
+  url "https://github.com/timvw/timvw-hello-rs/archive/0.1.29.tar.gz"
+  sha256 "8ac0b18a1d7a24c112074c6eddd530b229ccdb09f74f46617ac10d7881a14ac4"
   license "Apache-2.0"
 
   def install
