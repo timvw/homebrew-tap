@@ -9,7 +9,7 @@
       ],
       "groupName": "all dependencies",
       "groupSlug": "all",
-      "automerge": true
+      "automerge": false
     }
   ],
   "groupName": "all dependencies",
