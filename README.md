@@ -1,9 +1,16 @@
 # Timvw tap
 
 ## How do I install these formulae?
-`brew install timvw/tap<formula>`
+```bash
+brew install timvw/tap/<formula>
+```
 
-Or `brew tap timvw/tap` and then `brew install <formula>`.
+Or 
+
+```bash
+brew tap timvw/tap
+brew install <formula>
+```
 
 Or install via URL (which will not receive updates):
 
