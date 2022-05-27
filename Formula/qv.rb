@@ -3,8 +3,8 @@
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
-  url "https://github.com/timvw/qv/releases/download/0.1.12/qv-0.1.12-x86_64-apple-darwin-generic.tar.gz"
-  sha256 "d92922519ffde5543fc2489ce4240971fc93f268d8a0ff8e1d8d1f771fe3effa"
+  url "https://github.com/timvw/qv/archive/0.1.13.tar.gz"
+  sha256 "c77a77b60392e63a73ad8dec4dd86c35f9eb542e198033271c85ab93ac3baf68"
   license "Apache-2.0"
 
   def install
