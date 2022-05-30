@@ -3,8 +3,8 @@
 class TimvwHellorsBin < Formula
   desc "test repository to test github actions"
   homepage "https://github.com/timvw/timvw-hello-rs"
-  url "https://github.com/timvw/timvw-hello-rs/archive/0.1.29.tar.gz"
-  sha256 "8ac0b18a1d7a24c112074c6eddd530b229ccdb09f74f46617ac10d7881a14ac4"
+  url "https://github.com/timvw/timvw-hello-rs/archive/0.1.32.tar.gz"
+  sha256 "99714ee63ee1e2976ba5ee9dc0a50ceebb4c6ad9481360b02dbab187e8b2e3f2"
   license "Apache-2.0"
 
   def install
