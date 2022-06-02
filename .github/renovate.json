@@ -4,6 +4,10 @@
   ],
   "packageRules": [
     {
+      "matchPackagePatterns": ["^homebrew"],
+      "enabled": false
+    },
+    {
       "matchPackagePatterns": [
         "*"
       ],
