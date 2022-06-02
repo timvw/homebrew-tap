@@ -3,8 +3,8 @@
 class ArrowFlightSqlClient < Formula
   desc "Arrow Flight SQL Client"
   homepage "https://github.com/timvw/arrow-flight-sql-client"
-  url "https://github.com/timvw/arrow-flight-sql-client/releases/download/v0.2.0/arrow-flight-sql-client-0.2.0-x86_64-apple-darwin-generic.tar.gz"
-  sha256 "70fc4c2e37da29a37d01f01db2dd46f2ca9d55e440c9af2ddefbeb8aad03355f"
+  url "https://github.com/timvw/arrow-flight-sql-client/releases/download/v0.3.0/arrow-flight-sql-client-0.3.0-x86_64-apple-darwin-generic.tar.gz"
+  sha256 "1f3039d24ee9989c80e81b1566d93005b8c76d1534236ac4f7a375c88ce35106"
   license "Apache-2.0"
 
   def install
