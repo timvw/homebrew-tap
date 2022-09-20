@@ -3,7 +3,7 @@
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
-  url "https://github.com/timvw/qv/releases/download/v0.1.25/qv-0.1.25-x86_64-apple-darwin-generic.tar.gz"
+  url "https://github.com/timvw/qv/releases/download/v0.1.26/qv-0.1.26-x86_64-apple-darwin-generic.tar.gz"
   license "Apache-2.0"
 
   def install
