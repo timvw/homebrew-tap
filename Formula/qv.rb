@@ -1,4 +1,3 @@
-
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
@@ -17,4 +16,3 @@ class Qv < Formula
     shell_output("#{bin}/qv -V")
   end
 end
-
