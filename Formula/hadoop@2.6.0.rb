@@ -3,6 +3,7 @@ class HadoopAT260 < Formula
   homepage "https://hadoop.apache.org/"
   url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz"
   mirror "https://archive.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz"
+  sha256 "7A2EF6E7F468AFCAE95D0F7214816033C7E5C7982454061CCB117896D58D279F"
 
   depends_on "openjdk@8"
 
