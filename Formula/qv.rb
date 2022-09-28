@@ -1,8 +1,8 @@
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
-  url "https://github.com/timvw/qv/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "9ad50c79a90ecab399d861429ff045309c9d7e45012e9dd930e313c61bf4b9fe"
+  url "https://github.com/timvw/qv/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "6278a2b43d05da21d3625a69b1419c020bb706be8f83710ea832b5d42b254c91"
   license "Apache-2.0"
   head "https://github.com/timvw/qv.git", branch: "main"
 
