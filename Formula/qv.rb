@@ -1,5 +1,5 @@
 class Qv < Formula
-  desc "Quickly view your data"
+  desc "Quickly view your data now"
   homepage "https://github.com/timvw/qv"
   url "https://github.com/timvw/qv/archive/refs/tags/v0.3.1.tar.gz"
   sha256 "9ad50c79a90ecab399d861429ff045309c9d7e45012e9dd930e313c61bf4b9fe"
