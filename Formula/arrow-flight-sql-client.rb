@@ -1,5 +1,3 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class ArrowFlightSqlClient < Formula
   desc "Arrow Flight SQL Client"
   homepage "https://github.com/timvw/arrow-flight-sql-client"
