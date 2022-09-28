@@ -1,7 +1,7 @@
 class HadoopAT270 < Formula
   desc "Framework for distributed processing of large data sets"
   homepage "https://hadoop.apache.org/"
-  url "https://www.apache.org/dyn/closer.cgi?path=hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz"
+  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz"
   mirror "https://archive.apache.org/dist/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz"
   sha256 "ad270af05fff59d3f7021efe79328ed92dadfa64aa5ab4fcde4a204f803dbf9e"
 
