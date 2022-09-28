@@ -1,5 +1,5 @@
 class TimvwHellorsBin < Formula
-  desc "Test repository to test github actions awesome"
+  desc "Test repository to test github actions"
   homepage "https://github.com/timvw/timvw-hello-rs"
   url "https://github.com/timvw/timvw-hello-rs/archive/refs/tags/v0.1.91.tar.gz"
   sha256 "eac264c3bc205f0663834496143c0233d4b3d075b810bdbac42a371080160e30"
@@ -12,6 +12,6 @@ class TimvwHellorsBin < Formula
   end
 
   test do
-    shell_output("#{bin}/qv -V")
+    shell_output("#{bin}/timvw-hello-rs")
   end
 end
