@@ -12,6 +12,6 @@ class TimvwHellorsBin < Formula
   end
 
   test do
-    shell_output("#{bin}/qv -V")
+    shell_output("#{bin}/timvw-hello-rs")
   end
 end
