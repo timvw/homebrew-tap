@@ -1,11 +1,17 @@
 class TimvwHellorsBin < Formula
-  desc "Test repository to test github actions"
+  desc "Test repository to test github actions awesome"
   homepage "https://github.com/timvw/timvw-hello-rs"
-  url "https://github.com/timvw/timvw-hello-rs/releases/download/v0.1.91/timvw-hello-rs-0.1.91-x86_64-apple-darwin-generic.tar.gz"
-  sha256 "b66aa95be624f43d34ab0dfc135ec0d974970067e460b473eb49961783a380a2"
+  url "https://github.com/timvw/timvw-hello-rs/archive/refs/tags/v0.1.91.tar.gz"
+  sha256 "eac264c3bc205f0663834496143c0233d4b3d075b810bdbac42a371080160e30"
   license "Apache-2.0"
 
+  depends_on "rust" => :build
+
   def install
-    bin.install "timvw-hello-rs"
+    system "cargo", "install", *std_cargo_args
+  end
+
+  test do
+    shell_output("#{bin}/qv -V")
   end
 end
