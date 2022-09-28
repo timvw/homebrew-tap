@@ -17,7 +17,7 @@ class Qv < Formula
   end
 
   test do
-    shell_output("#{bin}/qv")
+    shell_output("#{bin}/qv -V")
   end
 end
 
