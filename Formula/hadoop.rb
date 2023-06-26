@@ -1,8 +1,8 @@
 class Hadoop < Formula
   desc "Framework for distributed processing of large data sets"
   homepage "https://hadoop.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz"
-  sha256 "446e05ca92fa23a60617a8b17946dede47281af1504041617cb7d5f62e74252a"
+  url "https://www.apache.org/dyn/closer.lua?path=hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz"
+  sha256 "f5195059c0d4102adaa7fff17f7b2a85df906bcb6e19948716319f9978641a04"
 
   depends_on "openjdk@8"
 
