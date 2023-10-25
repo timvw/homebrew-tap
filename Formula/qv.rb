@@ -7,10 +7,9 @@ class Qv < Formula
   head "https://github.com/timvw/qv.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/timvw/homebrew-tap/releases/download/qv-0.6.0"
-    sha256 cellar: :any_skip_relocation, monterey:     "a30254c20a1fce2c7c2083ed8e6cb12f4f7f8f1635ac0c27a9db1dd1612f2509"
-    sha256 cellar: :any_skip_relocation, big_sur:      "2e26ff6698f91cc5dc76f859e35c55799d65907cd55c0f8d7fa52cc33c9e9d17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "88f1f3eeaa30594711c65c0521a2ba24cb2bd8a7e9b5bd2a728ccfe3154c3d96"
+    root_url "https://github.com/timvw/homebrew-tap/releases/download/qv-0.8.4"
+    sha256 cellar: :any_skip_relocation, monterey:     "f164588390f730592f05e1366ed036d5a4e5fb9d387fc8ce30c5fe9ac2b9eb3a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0e5defc877777f58471022fcf3a4d3c9d7da1116b93588b3db02aa3d9f9f35f7"
   end
 
   depends_on "rust" => :build
