@@ -1,13 +1,23 @@
-name: Testing
-
+name: "Test Suite"
 on:
-  pull_request:
   push:
+    branches-ignore:
+      - 'dependabot/**' #avoid duplicates: only run the PR, not the push
+      - 'renovate/**' #avoid duplicates: only run the PR, not the push
+      - 'gh-pages' #github pages do not trigger all tests
+    tags-ignore:
+      - 'v*' #avoid rerun existing commit on release
+  pull_request:
     branches:
-      - master
+      - 'main'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:
+    if: (github.event_name != 'pull_request' && ! github.event.pull_request.head.repo.fork) || (github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || startsWith(github.head_ref, 'dependabot/') || startsWith(github.head_ref, 'renovate/')))  
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/homebrew/ubuntu22.04:master
@@ -17,7 +27,7 @@ jobs:
       - name: Check formulae
         run: brew test-bot --only-tap-syntax
   build:
-    if: github.event_name == 'pull_request'
+    if: (github.event_name != 'pull_request' && ! github.event.pull_request.head.repo.fork) || (github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || startsWith(github.head_ref, 'dependabot/') || startsWith(github.head_ref, 'renovate/')))
     needs: check
     strategy:
       fail-fast: false
@@ -27,8 +37,7 @@ jobs:
             container:
               image: ghcr.io/homebrew/ubuntu22.04:master
               options: --user=linuxbrew
-          - os: macos-12
-          - os: macos-13
+          - os: macos-14
     runs-on: ${{matrix.os}}
     container: ${{matrix.container}}
     steps:
