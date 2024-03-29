@@ -7,9 +7,8 @@ class Qv < Formula
   head "https://github.com/timvw/qv.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/timvw/homebrew-tap/releases/download/qv-0.8.4"
-    sha256 cellar: :any_skip_relocation, monterey:     "f164588390f730592f05e1366ed036d5a4e5fb9d387fc8ce30c5fe9ac2b9eb3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0e5defc877777f58471022fcf3a4d3c9d7da1116b93588b3db02aa3d9f9f35f7"
+    root_url "https://github.com/timvw/homebrew-tap/releases/download/qv-0.9.1"
+    sha256 cellar: :any_skip_relocation, ventura: "da46745aefb68b81c4c271a776a5e7f66ccb6340d861461ce7df7f14d67e0583"
   end
 
   depends_on "rust" => :build
