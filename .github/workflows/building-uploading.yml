@@ -22,7 +22,7 @@ jobs:
           brew test-bot --only-formulae --skip-recursive-dependents --keep-old ${{github.event.inputs.formula}}
       - name: Upload bottles
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bottles
           path: '*.bottle.*'
@@ -35,7 +35,7 @@ jobs:
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
       - name: Download bottles
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: bottles
       - name: Publish bottles
