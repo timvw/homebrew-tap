@@ -11,16 +11,8 @@
       "matchPackagePatterns": [
         "*"
       ],
-      "groupName": "all dependencies",
-      "groupSlug": "all",
       "automerge": false
     }
   ],
-  "groupName": "all dependencies",
-  "separateMajorMinor": false,
-  "groupSlug": "all",
-  "lockFileMaintenance": {
-    "enabled": false
-  },
   "dependencyDashboard": true
 }
