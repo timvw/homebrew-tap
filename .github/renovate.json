@@ -2,17 +2,5 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["^homebrew"],
-      "enabled": false
-    },
-    {
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "automerge": false
-    }
-  ],
   "dependencyDashboard": true
 }
