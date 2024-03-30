@@ -1,4 +1,4 @@
-name: Bumping
+name: brew bump
 
 on:
   schedule:
