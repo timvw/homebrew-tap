@@ -16,6 +16,10 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Ensure Rust dependency exists
+        run: brew install rust
+        if: matrix.os == 'macos-13'
+
       - name: Cache Homebrew Bundler RubyGems
         id: cache
         uses: actions/cache@v4
