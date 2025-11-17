@@ -4,6 +4,7 @@ class Bose < Formula
   url "https://github.com/timvw/bose/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "b23bc1cd037a662a4cc4503ab920ede2ede0090337c3395a9a8504f9157b9a1a"
   license "Apache-2.0"
+  head "https://github.com/timvw/bose.git", branch: "main"
 
   depends_on "rust" => :build
 
