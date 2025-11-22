@@ -1,14 +1,14 @@
 class Bose < Formula
   desc "CLI to control Bose SoundTouch speakers"
   homepage "https://github.com/timvw/bose"
-  url "https://github.com/timvw/bose/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "b23bc1cd037a662a4cc4503ab920ede2ede0090337c3395a9a8504f9157b9a1a"
+  url "https://github.com/timvw/bose/releases/download/v0.2.0/bose-0.2.0-macos-universal.tar.gz"
+  sha256 "d0616decd3aca56e0b8642d6b26fd955288c6c86f70d5847fcaac59f25f6c3f4"
   license "Apache-2.0"
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "bose-universal-macos" => "bose"
+    doc.install "README.md"
+    (share/"licenses"/name).install "LICENSE"
   end
 
   test do
