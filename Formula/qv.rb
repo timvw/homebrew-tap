@@ -1,20 +1,17 @@
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
-  url "https://github.com/timvw/qv/archive/refs/tags/v0.9.3.tar.gz"
-  sha256 "1a9625265bd94f65645c4d5e578f541f9635d224032344125032bf7082baed23"
+  url "https://github.com/timvw/qv/releases/download/v0.9.6/qv-0.9.6-macos-arm64.tar.gz"
+  sha256 "9443fa4623439bda45ab3d5614907b6a9f48908dc8c27409196c6929aadd9b01"
   license "Apache-2.0"
   head "https://github.com/timvw/qv.git", branch: "main"
 
-  bottle do
-    root_url "https://github.com/timvw/homebrew-tap/releases/download/qv-0.9.3"
-    sha256 cellar: :any_skip_relocation, ventura: "c43b8d7aadbf6c20671d75aba1db8e832b47c614cccfc3dfdae918e46d0462b5"
-  end
-
-  depends_on "rust" => :build
+  depends_on :macos
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "qv-universal-macos" => "qv"
+    doc.install "README.md" if File.exist?("README.md")
+    (share/"licenses"/name).install "LICENSE"
   end
 
   test do
