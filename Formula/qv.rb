@@ -6,7 +6,7 @@ class Qv < Formula
   license "Apache-2.0"
   head "https://github.com/timvw/qv.git", branch: "main"
 
-  depends_on :macos, arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "qv-universal-macos" => "qv"
