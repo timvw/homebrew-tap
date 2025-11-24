@@ -79,5 +79,5 @@ jobs:
       - name: Verify bose artifact available (linux)
         if: steps.formula-changes.outputs.bose == 'true' && matrix.os == 'ubuntu-24.04'
         run: |
-          bose_url=$(ruby -e 'require "formula"; load "Formula/bose.rb"; puts Bose.new.url')
+          bose_url=$(brew ruby -e 'puts Formula["timvw/tap/bose"].url')
           curl --head --fail "$bose_url"
