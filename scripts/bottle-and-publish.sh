@@ -34,7 +34,7 @@ echo "==> Running brew test-bot on merged state"
 brew test-bot --only-cleanup-before
 brew test-bot --only-setup
 brew test-bot --only-tap-syntax
-HOMEBREW_GITHUB_API_TOKEN="${GH_TOKEN}" brew test-bot --only-formulae --fetch-logs
+HOMEBREW_GITHUB_API_TOKEN="${GH_TOKEN}" brew test-bot --only-formulae
 
 echo "==> Uploading bottles"
 shopt -s nullglob
