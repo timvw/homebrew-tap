@@ -54,7 +54,7 @@ jobs:
       - name: Test qv
         if: steps.formula-changes.outputs.qv == 'true'
         run: |
-          brew test --formula timvw/tap/qv
+          brew test timvw/tap/qv
           brew audit --strict timvw/tap/qv
 
       - name: Upload qv bottles
@@ -73,7 +73,7 @@ jobs:
       - name: Test bose (mac only)
         if: steps.formula-changes.outputs.bose == 'true' && matrix.os == 'macos-15'
         run: |
-          brew test --formula timvw/tap/bose
+          brew test timvw/tap/bose
           brew audit --strict timvw/tap/bose
 
       - name: Verify bose artifact available (linux)
