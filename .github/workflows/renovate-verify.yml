@@ -35,12 +35,12 @@ jobs:
           restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install qv
-        run: brew install --build-bottle ./Formula/qv.rb
+        run: brew install --build-bottle timvw/tap/qv
 
       - name: Test qv
         run: |
-          brew test ./Formula/qv.rb
-          brew audit --strict ./Formula/qv.rb
+          brew test --formula timvw/tap/qv
+          brew audit --strict timvw/tap/qv
 
       - name: Upload qv bottles
         if: matrix.os == 'macos-15'
@@ -52,14 +52,14 @@ jobs:
       - name: Install bose (mac only)
         if: matrix.os == 'macos-15'
         run: |
-          brew install ./Formula/bose.rb
+          brew install timvw/tap/bose
           file "$(which bose)"
 
       - name: Test bose (mac only)
         if: matrix.os == 'macos-15'
         run: |
-          brew test ./Formula/bose.rb
-          brew audit --strict ./Formula/bose.rb
+          brew test --formula timvw/tap/bose
+          brew audit --strict timvw/tap/bose
 
       - name: Verify bose artifact available (linux)
         if: matrix.os == 'ubuntu-24.04'
