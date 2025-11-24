@@ -3,6 +3,9 @@ name: renovate verify
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'Formula/qv.rb'
+      - 'Formula/bose.rb'
 
 jobs:
   verify:
@@ -14,6 +17,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Detect formula changes
+        id: formula-changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            qv:
+              - 'Formula/qv.rb'
+            bose:
+              - 'Formula/bose.rb'
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -35,34 +48,36 @@ jobs:
           restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install qv
+        if: steps.formula-changes.outputs.qv == 'true'
         run: brew install --build-bottle timvw/tap/qv
 
       - name: Test qv
+        if: steps.formula-changes.outputs.qv == 'true'
         run: |
           brew test --formula timvw/tap/qv
           brew audit --strict timvw/tap/qv
 
       - name: Upload qv bottles
-        if: matrix.os == 'macos-15'
+        if: steps.formula-changes.outputs.qv == 'true' && matrix.os == 'macos-15'
         uses: actions/upload-artifact@v4
         with:
           name: qv-bottles-${{ matrix.os }}
           path: '*.bottle.*'
 
       - name: Install bose (mac only)
-        if: matrix.os == 'macos-15'
+        if: steps.formula-changes.outputs.bose == 'true' && matrix.os == 'macos-15'
         run: |
           brew install timvw/tap/bose
           file "$(which bose)"
 
       - name: Test bose (mac only)
-        if: matrix.os == 'macos-15'
+        if: steps.formula-changes.outputs.bose == 'true' && matrix.os == 'macos-15'
         run: |
           brew test --formula timvw/tap/bose
           brew audit --strict timvw/tap/bose
 
       - name: Verify bose artifact available (linux)
-        if: matrix.os == 'ubuntu-24.04'
+        if: steps.formula-changes.outputs.bose == 'true' && matrix.os == 'ubuntu-24.04'
         run: |
           bose_url=$(ruby -e 'require "formula"; load "Formula/bose.rb"; puts Bose.new.url')
           curl --head --fail "$bose_url"
