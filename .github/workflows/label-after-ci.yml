@@ -1,0 +1,26 @@
+name: auto label pr-pull
+
+on:
+  pull_request:
+    types: [synchronize, opened, reopened]
+
+jobs:
+  label:
+    if: github.actor == 'renovate[bot]'
+    runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Wait for checks
+        uses: lewagon/wait-on-check-action@v1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-name: |
+            brew test-bot
+            renovate verify
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Add pr-pull label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: pr-pull

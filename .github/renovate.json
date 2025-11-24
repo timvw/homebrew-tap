@@ -2,5 +2,35 @@
   "extends": [
     "config:base"
   ],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "labels": ["renovate"],
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "matchPaths": ["Formula/qv.rb", "Formula/bose.rb"],
+      "matchDatasources": ["github-tags", "github-releases"],
+      "addLabels": ["renovate", "homebrew"],
+      "prPriority": 10,
+      "stabilityDays": 0
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["Formula/qv\\.rb"],
+      "matchStrings": [
+        "url \"https://github\\.com/timvw/qv/(?:releases/download|archive/refs/tags)/v?(?<currentValue>\\d+\\.\\d+\\.\\d+)[^\"]*\"",
+        "root_url \"https://github\\.com/timvw/homebrew-tap/releases/download/qv-(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+      ],
+      "datasourceTemplate": "github-releases",
+      "packageNameTemplate": "timvw/qv"
+    },
+    {
+      "fileMatch": ["Formula/bose\\.rb"],
+      "matchStrings": [
+        "url \"https://github\\.com/timvw/bose/releases/download/v?(?<currentValue>\\d+\\.\\d+\\.\\d+)/[^\"]+\""
+      ],
+      "datasourceTemplate": "github-releases",
+      "packageNameTemplate": "timvw/bose"
+    }
+  ]
 }
