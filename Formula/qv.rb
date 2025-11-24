@@ -1,8 +1,8 @@
 class Qv < Formula
   desc "Quickly view your data"
   homepage "https://github.com/timvw/qv"
-  url "https://github.com/timvw/qv/releases/download/v0.9.6/qv-0.9.6-macos-arm64.tar.gz"
-  sha256 "9443fa4623439bda45ab3d5614907b6a9f48908dc8c27409196c6929aadd9b01"
+  url "https://github.com/timvw/qv/releases/download/v0.9.14/qv-0.9.14-macos-arm64.tar.gz"
+  sha256 "635dfdc03ea54aafe80854781b590efa42ea1de9e0d67e5a69d64bdf8b78de0b"
   license "Apache-2.0"
   head "https://github.com/timvw/qv.git", branch: "main"
 
