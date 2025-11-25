@@ -33,10 +33,8 @@
       "fileMatch": [
         "(^|/)Formula/qv\\.rb$"
       ],
-      "matchStringsStrategy": "combination",
       "matchStrings": [
-        "url \"https://github\\.com/timvw/qv/releases/download/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/qv-(?:aarch64|x86_64)-apple-darwin\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\"",
-        "root_url \"https://github\\.com/timvw/homebrew-tap/releases/download/qv-(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+        "url \"https://github\\.com/timvw/qv/releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/qv-(?:aarch64|x86_64)-apple-darwin\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-release-attachments",
       "packageNameTemplate": "timvw/qv",
@@ -48,7 +46,7 @@
         "(^|/)Formula/bose\\.rb$"
       ],
       "matchStrings": [
-        "url \"https://github\\.com/timvw/bose/releases/download/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
+        "url \"https://github\\.com/timvw/bose/releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-release-attachments",
       "packageNameTemplate": "timvw/bose",
