@@ -37,8 +37,7 @@
         "url \"https://github\\.com/timvw/qv/releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/qv-(?:aarch64|x86_64)-apple-darwin\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-release-attachments",
-      "packageNameTemplate": "timvw/qv",
-      "extractVersionTemplate": "v{{version}}"
+      "packageNameTemplate": "timvw/qv"
     },
     {
       "customType": "regex",
@@ -49,8 +48,7 @@
         "url \"https://github\\.com/timvw/bose/releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-release-attachments",
-      "packageNameTemplate": "timvw/bose",
-      "extractVersionTemplate": "v{{version}}"
+      "packageNameTemplate": "timvw/bose"
     }
   ]
 }
