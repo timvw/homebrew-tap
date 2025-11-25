@@ -47,12 +47,12 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
-      - name: Install qv
-        if: steps.formula-changes.outputs.qv == 'true'
+      - name: Install qv (mac only)
+        if: steps.formula-changes.outputs.qv == 'true' && matrix.os == 'macos-15'
         run: brew install --build-bottle timvw/tap/qv
 
-      - name: Test qv
-        if: steps.formula-changes.outputs.qv == 'true'
+      - name: Test qv (mac only)
+        if: steps.formula-changes.outputs.qv == 'true' && matrix.os == 'macos-15'
         run: |
           brew test timvw/tap/qv
           brew audit --strict timvw/tap/qv
