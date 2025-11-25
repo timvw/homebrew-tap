@@ -9,7 +9,6 @@ class Qv < Formula
     url "https://github.com/timvw/qv/releases/download/v0.9.14/qv-x86_64-apple-darwin.tar.gz"
     sha256 "26a19254960b934a9430f3830df64400de98f25e2a669b1e3bfad09a32176f76"
   end
-  version "0.9.14"
   license "Apache-2.0"
   head "https://github.com/timvw/qv.git", branch: "main"
 
