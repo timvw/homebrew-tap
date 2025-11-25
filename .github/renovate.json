@@ -31,7 +31,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "/Formula/qv\\.rb/"
+        "(^|/)Formula/qv\\.rb$"
       ],
       "matchStringsStrategy": "combination",
       "matchStrings": [
@@ -44,7 +44,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "/Formula/bose\\.rb/"
+        "(^|/)Formula/bose\\.rb$"
       ],
       "matchStrings": [
         "url \"https://github\\.com/timvw/bose/releases/download/v?(?<currentValue>\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
