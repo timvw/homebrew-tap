@@ -46,9 +46,9 @@
         "/Formula/bose\\.rb/"
       ],
       "matchStrings": [
-        "url \"https://github\\.com/timvw/bose/releases/download/v?(?<currentValue>\\d+\\.\\d+\\.\\d+)/[^\"]+\""
+        "(?m)url \"https://github\\.com/timvw/bose/releases/download/v?(?<currentValue>\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-release-attachments",
       "packageNameTemplate": "timvw/bose"
     }
   ]
