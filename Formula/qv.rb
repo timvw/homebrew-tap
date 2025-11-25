@@ -3,11 +3,11 @@ class Qv < Formula
   homepage "https://github.com/timvw/qv"
 
   if Hardware::CPU.arm?
-    url "https://github.com/timvw/qv/releases/download/v0.9.14/qv-aarch64-apple-darwin.tar.gz"
-    sha256 "663ce40c3a4e68a6b4feef93d919534c22922cc352588129c49e816a00359b4d"
+    url "https://github.com/timvw/qv/releases/download/v0.9.15/qv-aarch64-apple-darwin.tar.gz"
+    sha256 "24259e523848ab44f888da936be7a3497b67613061e5d66f6fb4aeee774a9bbc"
   else
-    url "https://github.com/timvw/qv/releases/download/v0.9.14/qv-x86_64-apple-darwin.tar.gz"
-    sha256 "26a19254960b934a9430f3830df64400de98f25e2a669b1e3bfad09a32176f76"
+    url "https://github.com/timvw/qv/releases/download/v0.9.15/qv-x86_64-apple-darwin.tar.gz"
+    sha256 "fcd767882a98f9f15d75494a946c893494beb15a7bbf5f187da51f77b037f16a"
   end
   license "Apache-2.0"
   version_scheme 1
