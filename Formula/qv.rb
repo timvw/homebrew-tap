@@ -19,7 +19,7 @@ class Qv < Formula
   def install
     bin.install "qv"
     doc.install "README.md" if File.exist?("README.md")
-    (share/"licenses"/name).install "LICENSE"
+    (share/"licenses"/name).install "LICENSE" if File.exist?("LICENSE")
   end
 
   test do
