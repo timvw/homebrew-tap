@@ -9,6 +9,20 @@
   "packageRules": [
     {
       "matchManagers": [
+        "homebrew",
+        "custom.regex"
+      ],
+      "addLabels": [
+        "renovate",
+        "homebrew"
+      ],
+      "prPriority": 10,
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
+      "matchManagers": [
         "custom.regex"
       ],
       "matchFileNames": [
