@@ -9,7 +9,7 @@
   "packageRules": [
     {
       "matchManagers": [
-        "custom.regex"
+        "regex"
       ],
       "matchFileNames": [
         "Formula/qv.rb",
@@ -27,9 +27,8 @@
       "minimumReleaseAge": null
     }
   ],
-  "customManagers": [
+  "regexManagers": [
     {
-      "customType": "regex",
       "fileMatch": [
         "/Formula/qv\\.rb/"
       ],
@@ -41,7 +40,6 @@
       "packageNameTemplate": "timvw/qv"
     },
     {
-      "customType": "regex",
       "fileMatch": [
         "/Formula/bose\\.rb/"
       ],
