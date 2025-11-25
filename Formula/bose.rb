@@ -1,8 +1,8 @@
 class Bose < Formula
   desc "CLI to control Bose SoundTouch speakers"
   homepage "https://github.com/timvw/bose"
-  url "https://github.com/timvw/bose/releases/download/v0.2.3/bose-v0.2.3-apple-darwin-universal.tar.gz"
-  sha256 "6493d532efcb061c5d0a8ec1dbacdfe76ba931c3da94b872e4fd2363f4827ef8"
+  url "https://github.com/timvw/bose/archive/refs/tags/v0.2.10.tar.gz"
+  sha256 "e72751442c3f8ca85716d73382468a8b2755d2ff9700d44903ce20a83d24c6d4"
   license "Apache-2.0"
   # macOS-only binary; Linux checks only validate artifact availability.
   depends_on :macos
