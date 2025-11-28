@@ -71,10 +71,12 @@
         "(^|/)Formula/wt\\.rb$"
       ],
       "matchStrings": [
-        "url \"https://github\\.com/timvw/wt/releases/download/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/wt-(?:darwin-(?:amd64|arm64)|linux-(?:amd64|arm64))\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
+        "version \"(?<currentValue>\\d+\\.\\d+\\.\\d+)\"",
+        "url \"https://github\\.com/timvw/wt/releases/download/(?<currentValueAndDigest>v\\d+\\.\\d+\\.\\d+)/wt-(?:darwin-(?:amd64|arm64)|linux-(?:amd64|arm64))\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-release-attachments",
-      "packageNameTemplate": "timvw/wt"
+      "packageNameTemplate": "timvw/wt",
+      "extractVersionTemplate": "{{currentValue}}"
     }
   ]
 }
