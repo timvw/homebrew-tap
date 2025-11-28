@@ -7,21 +7,21 @@ class Wt < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/timvw/wt/releases/download/v0.1.0/wt-darwin-arm64"
-      sha256 "a18a515d5bebb4e91d32c353bd80c5336d4a23c9f26ce93e4496e6980b23a3ba"
+      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-darwin-arm64"
+      sha256 "a1c3a04db2c22696995d8b016e255d3a827ffacc87908d510f453442c1814f69"
     else
-      url "https://github.com/timvw/wt/releases/download/v0.1.0/wt-darwin-amd64"
-      sha256 "85bb8d64860b170e70e428944ef7f6402bda11db329f6cfca14250224d871c9b"
+      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-darwin-amd64"
+      sha256 "0ad0c1bbcdc2d27e231ce6d7cf35c69709fed82b567ed531d1903a704313a372"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/timvw/wt/releases/download/v0.1.0/wt-linux-arm64"
-      sha256 "4572b19fe879b84837fd131a9d7b057a3fa999eb5a6b43da74890d4c6be194b1"
+      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-linux-arm64"
+      sha256 "c9a7f5b01fe10700d4b1aa70560cd80247c312f56272e95dc95dbc69a8e05574"
     else
-      url "https://github.com/timvw/wt/releases/download/v0.1.0/wt-linux-amd64"
-      sha256 "27f58a4312670acc43a1a2c0bbc3a6eaa402330d3e2864def31ff5182d1ccf12"
+      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-linux-amd64"
+      sha256 "18e62923017ce65c3d6e5a5d82bcdec92c7c56797549f18d79049193b936ec39"
     end
   end
 
