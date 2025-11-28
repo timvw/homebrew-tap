@@ -1,7 +1,7 @@
 class Wt < Formula
   desc "Git worktree helper"
   homepage "https://github.com/timvw/wt"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
   head "https://github.com/timvw/wt.git", branch: "main"
 
