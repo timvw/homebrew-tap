@@ -8,6 +8,16 @@
   ],
   "packageRules": [
     {
+      "matchFiles": [
+        "Formula/wt.rb"
+      ],
+      "matchManagers": [
+        "homebrew"
+      ],
+      "enabled": false,
+      "description": "Disable Renovate for wt.rb - updated automatically by release workflow"
+    },
+    {
       "matchManagers": [
         "homebrew",
         "custom.regex"
