@@ -27,8 +27,7 @@
       ],
       "matchFileNames": [
         "Formula/qv.rb",
-        "Formula/bose.rb",
-        "Formula/wt.rb"
+        "Formula/bose.rb"
       ],
       "matchDatasources": [
         "github-tags",
@@ -64,19 +63,6 @@
       ],
       "datasourceTemplate": "github-release-attachments",
       "packageNameTemplate": "timvw/bose"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/(^|/)Formula/wt\\.rb$/"
-      ],
-      "matchStrings": [
-        "version \"(?<currentValue>\\d+\\.\\d+\\.\\d+)\"",
-        "url \"https://github\\.com/timvw/wt/releases/download/(?<currentValueAndDigest>v\\d+\\.\\d+\\.\\d+)/wt-(?:darwin-(?:amd64|arm64)|linux-(?:amd64|arm64))\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
-      ],
-      "datasourceTemplate": "github-release-attachments",
-      "packageNameTemplate": "timvw/wt",
-      "extractVersionTemplate": "{{currentValue}}"
     }
   ]
 }

@@ -1,34 +1,21 @@
 class Wt < Formula
   desc "Git worktree helper"
   homepage "https://github.com/timvw/wt"
-  version "0.1.1"
+  url "https://github.com/timvw/wt/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "faa7c4167c8755e59647c28e3d0d177eb5a70c5cbe4c35db98646f64634fc228"
   license "MIT"
   head "https://github.com/timvw/wt.git", branch: "main"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-darwin-arm64"
-      sha256 "a1c3a04db2c22696995d8b016e255d3a827ffacc87908d510f453442c1814f69"
-    else
-      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-darwin-amd64"
-      sha256 "0ad0c1bbcdc2d27e231ce6d7cf35c69709fed82b567ed531d1903a704313a372"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-linux-arm64"
-      sha256 "c9a7f5b01fe10700d4b1aa70560cd80247c312f56272e95dc95dbc69a8e05574"
-    else
-      url "https://github.com/timvw/wt/releases/download/v0.1.1/wt-linux-amd64"
-      sha256 "18e62923017ce65c3d6e5a5d82bcdec92c7c56797549f18d79049193b936ec39"
-    end
+  bottle do
+    root_url "https://github.com/timvw/wt/releases/download/v0.1.2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "61cf10570098b11b8cfad78ab5bb1eeecedcdbca2d3cf7736a216b23f4d458be"
+    sha256 cellar: :any_skip_relocation, ventura: "2a9405cc092ca62ba0f0a80bb25867beddb2e04c158156604f1f3a805fe62016"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "11d8ca256f2224f03d25b68aa8e0d3aaf5fa0d056f17a5f9759c3b22d8fa0242"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c6adea11f21a787ad5f9e8fc5cc8003d19ed3f71ac680c5e461fe716d3407ba3"
   end
 
   def install
-    os = OS.mac? ? "darwin" : "linux"
-    arch = Hardware::CPU.arm? ? "arm64" : "amd64"
-    bin.install "wt-#{os}-#{arch}" => "wt"
+    bin.install "wt"
   end
 
   test do
