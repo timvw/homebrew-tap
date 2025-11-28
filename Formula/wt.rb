@@ -1,8 +1,8 @@
 class Wt < Formula
   desc "Git worktree helper"
   homepage "https://github.com/timvw/wt"
-  url "https://github.com/timvw/wt/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "3cc30d31531f3d2e4847c4b07441f383e4d84eba22db2d0c5cf99a35bea7ff0c"
+  url "https://github.com/timvw/wt/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "cbb55ab6bc4d8b1b996a640b21771d11f0e4c065459dc37d8441e052a1bc3895"
   license "MIT"
   head "https://github.com/timvw/wt.git", branch: "main"
 
