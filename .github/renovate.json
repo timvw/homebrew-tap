@@ -45,8 +45,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "(^|/)Formula/qv\\.rb$"
+      "managerFilePatterns": [
+        "/(^|/)Formula/qv\\.rb$/"
       ],
       "matchStrings": [
         "url \"https://github\\.com/timvw/qv/releases/download/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/qv-(?:aarch64|x86_64)-apple-darwin\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
@@ -56,8 +56,8 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [
-        "(^|/)Formula/bose\\.rb$"
+      "managerFilePatterns": [
+        "/(^|/)Formula/bose\\.rb$/"
       ],
       "matchStrings": [
         "url \"https://github\\.com/timvw/bose/releases/download/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/bose-v\\d+\\.\\d+\\.\\d+-apple-darwin-universal\\.tar\\.gz\"\\s*\\n\\s*sha256 \"(?<currentDigest>[a-f0-9]{64})\""
@@ -67,8 +67,8 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [
-        "(^|/)Formula/wt\\.rb$"
+      "managerFilePatterns": [
+        "/(^|/)Formula/wt\\.rb$/"
       ],
       "matchStrings": [
         "version \"(?<currentValue>\\d+\\.\\d+\\.\\d+)\"",
