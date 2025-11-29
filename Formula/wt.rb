@@ -1,17 +1,17 @@
 class Wt < Formula
   desc "Git worktree helper"
   homepage "https://github.com/timvw/wt"
-  url "https://github.com/timvw/wt/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "62c6126e10b8da44e03ad5826149d894951c43e4252c7dd5ef1726678bf57112"
+  url "https://github.com/timvw/wt/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "5b4636f45e0353b2f257ca1ddcdce1a67346eb99e801c39d0a2ee791869e8197"
   license "MIT"
   head "https://github.com/timvw/wt.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/timvw/wt/releases/download/v0.1.10"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ace37f507ef9afb997c9506cb54355c37052c0fdd7118977f2694c090c9e37ff"
-    sha256 cellar: :any_skip_relocation, ventura:       "3aef9b233081357e68841cadd268e91e4e3f39f968c369bc2f270c03855ec742"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd8f04f9054aa11c9bc0c554df3328dda9439b71146c06fb05dc52e4e091cf35"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "db0d71aaf750b3b7792f9ac2d3af9ae2f586a7323db1bcf11c8a8c5a89224b85"
+    root_url "https://github.com/timvw/wt/releases/download/v0.1.11"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "279adabb90f5102f2c63c0a7e3226ba2cd66214b949d392ed878d2417402b1c7"
+    sha256 cellar: :any_skip_relocation, ventura:       "c79dcff18976c5509e7225d52d1828edf7dbb0d13cb76cbc0fb5486114ece652"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "848618b5df230b39e915c472ac0d6cd5a16ed0136d2a3806835de3122ae537f1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6396df3f0ed1bc003b5f9d3dfbae7df11081ca3ad96e786c786ea6d702508527"
   end
 
   def install
