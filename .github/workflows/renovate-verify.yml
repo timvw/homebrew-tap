@@ -59,7 +59,7 @@ jobs:
 
       - name: Upload qv bottles
         if: steps.formula-changes.outputs.qv == 'true' && matrix.os == 'macos-15'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: qv-bottles-${{ matrix.os }}
           path: '*.bottle.*'
