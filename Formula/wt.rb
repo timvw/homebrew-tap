@@ -11,7 +11,7 @@ class Wt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/timvw/wt/releases/download/v0.1.21/wt_0.1.21_darwin_amd64.tar.gz"
-      sha256 "df72dd4ec52710e317515846ab5fdd6b3b194bd398df368d61bb9ba7e7aa03a0"
+      sha256 "e431bab450a216cc2fec29481376bfe8c420191e26e2caa851c2b6836be3f444"
 
       def install
         bin.install "wt"
@@ -19,7 +19,7 @@ class Wt < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/timvw/wt/releases/download/v0.1.21/wt_0.1.21_darwin_arm64.tar.gz"
-      sha256 "31cc9376fb3b25f44beeef9d0462f96aec896025bc15e643a4941778974dd4c6"
+      sha256 "a7714892b6e6340d03247b96a243f674b23ed2e6dff513ddb6276d17aabffda7"
 
       def install
         bin.install "wt"
@@ -30,14 +30,14 @@ class Wt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/timvw/wt/releases/download/v0.1.21/wt_0.1.21_linux_amd64.tar.gz"
-      sha256 "74c41e8a63256f71f2ca68ad225db491961d6745b69e7a8d3cbd6e576f402b2c"
+      sha256 "e191effa917a901ae0e4a503f980288476ef326ecb90d1072c84b8e3296367b6"
       def install
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/timvw/wt/releases/download/v0.1.21/wt_0.1.21_linux_arm64.tar.gz"
-      sha256 "6766967a3ef5ca5609c37d87c72e690eebc7fe8ae55d9c6c93e8a6efa081b0e5"
+      sha256 "c0196ed1835204197c325e955f68702942efc93af86af527c7417a584ae69c4e"
       def install
         bin.install "wt"
       end
