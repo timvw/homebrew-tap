@@ -5,23 +5,23 @@
 class PanePatrol < Formula
   desc "ZFC-compliant terminal pane monitor for AI coding agents"
   homepage "https://github.com/timvw/pane-patrol"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/timvw/pane-patrol/releases/download/v0.3.0/pane-patrol_0.3.0_darwin_amd64.tar.gz"
-      sha256 "1fa75e48bc3ec649471d8c792df330c292f598262f52f922c8e62c6679dc0acb"
+      url "https://github.com/timvw/pane-patrol/releases/download/v0.4.0/pane-patrol_0.4.0_darwin_amd64.tar.gz"
+      sha256 "30420df3adb8f5d7f499907811ced600841ea926a56c2d321a7eb9c92a8d0a7f"
 
-      def install
+      define_method(:install) do
         bin.install "pane-patrol"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/timvw/pane-patrol/releases/download/v0.3.0/pane-patrol_0.3.0_darwin_arm64.tar.gz"
-      sha256 "d5ee3f46933786b6466e835ce43aee74f542efc1a4dc8bfd2abe6c2924a5ad8e"
+      url "https://github.com/timvw/pane-patrol/releases/download/v0.4.0/pane-patrol_0.4.0_darwin_arm64.tar.gz"
+      sha256 "8eed31659799494238da7d9df0aab6f211f65d8aa8a15bd60b83b061e6334b85"
 
-      def install
+      define_method(:install) do
         bin.install "pane-patrol"
       end
     end
@@ -29,16 +29,16 @@ class PanePatrol < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timvw/pane-patrol/releases/download/v0.3.0/pane-patrol_0.3.0_linux_amd64.tar.gz"
-      sha256 "172dc03eadeef674429c6ef585c9c430a86a9df8f91226b69dd2ed3ab8de237a"
-      def install
+      url "https://github.com/timvw/pane-patrol/releases/download/v0.4.0/pane-patrol_0.4.0_linux_amd64.tar.gz"
+      sha256 "37d6eb81658a4577a6044d03640eb76489ca33a42ca9ba91cb39577d142f537c"
+      define_method(:install) do
         bin.install "pane-patrol"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timvw/pane-patrol/releases/download/v0.3.0/pane-patrol_0.3.0_linux_arm64.tar.gz"
-      sha256 "01a4d6fa9f663e536066e5268f8b5e8f844ffb8ebfbd9fb23e4b8fdf3d0021b2"
-      def install
+      url "https://github.com/timvw/pane-patrol/releases/download/v0.4.0/pane-patrol_0.4.0_linux_arm64.tar.gz"
+      sha256 "72c0c20ae2b5c6ba4f1b0e78dab3beedb34b2eae447ebad25a02a6c41ab9199d"
+      define_method(:install) do
         bin.install "pane-patrol"
       end
     end
