@@ -20,7 +20,7 @@ jobs:
 
       - name: Detect formula changes
         id: formula-changes
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         with:
           filters: |
             qv:
