@@ -5,21 +5,21 @@
 class Wt < Formula
   desc "Fast, simple Git worktree helper"
   homepage "https://github.com/timvw/wt"
-  version "0.1.27"
+  version "0.1.28"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/timvw/wt/releases/download/v0.1.27/wt_0.1.27_darwin_amd64.tar.gz"
-      sha256 "575c1de033f0f917da2dcbe6a36ea3d220bc696596256762c167e0a6c3a75abb"
+      url "https://github.com/timvw/wt/releases/download/v0.1.28/wt_0.1.28_darwin_amd64.tar.gz"
+      sha256 "aa9c9f85115df476ba95c6ab1bcd299d278d1fd2b78a538b47b42375f06733c3"
 
       define_method(:install) do
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/timvw/wt/releases/download/v0.1.27/wt_0.1.27_darwin_arm64.tar.gz"
-      sha256 "b946456136ca1ca9d4d4252b33bcaf66940fb639c3e658d6d800f6b2667ade37"
+      url "https://github.com/timvw/wt/releases/download/v0.1.28/wt_0.1.28_darwin_arm64.tar.gz"
+      sha256 "5e86981abe62ed9e4452625b96ac19e4d502903c130e89b8a403b8091bee22f4"
 
       define_method(:install) do
         bin.install "wt"
@@ -29,15 +29,15 @@ class Wt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timvw/wt/releases/download/v0.1.27/wt_0.1.27_linux_amd64.tar.gz"
-      sha256 "893368129106ab893c6112881f888ab6a3f860f9ed43669ed0325bc48ef4abc8"
+      url "https://github.com/timvw/wt/releases/download/v0.1.28/wt_0.1.28_linux_amd64.tar.gz"
+      sha256 "bcf78e981ca397c2cf630d7147d334722beb182eb68602a8854014a5e4e4433b"
       define_method(:install) do
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timvw/wt/releases/download/v0.1.27/wt_0.1.27_linux_arm64.tar.gz"
-      sha256 "fc9f60584c15f246541f14d91117e9ba33d4d6e1c2549d9875cd4f7380a40eb2"
+      url "https://github.com/timvw/wt/releases/download/v0.1.28/wt_0.1.28_linux_arm64.tar.gz"
+      sha256 "a591714799409306473370851aee7d8f26ad93fec70f9d6af9efcd9520d4660a"
       define_method(:install) do
         bin.install "wt"
       end
